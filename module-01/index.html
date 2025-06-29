@@ -15,94 +15,67 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <style>
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        width: 100%;
-        font-family: "Quicksand", sans-serif;
-        box-sizing: border-box;
-      }
-
-      /* Wrapper to center the entire content block */
       .center-wrapper {
         display: flex;
         justify-content: center; /* center horizontally */
         align-items: center; /* center vertically */
-        height: 100vh; /* full screen height */
+        height: 100vh; /* full viewport height */
         text-align: center;
-        padding: 20px;
       }
 
-      /* Content container (adjust max-width as needed) */
       .content {
-        max-width: 800px;
-        width: 100%;
+        max-width: 600px;
         padding: 20px;
       }
 
-      /* Welcome area styling */
+      body {
+        font-family: sans-serif;
+      }
+      h1 {
+        color: 183B4E;
+        font-weight: bold;
+        border-radius: 15px;
+        display: inline-block;
+        font-family: "Quicksand";
+      }
       .welcome-container {
         text-align: left;
         padding: 40px 20px;
-        width: 100%;
       }
-
-      /* Image responsiveness */
       .welcome-image {
         max-width: 600px;
         width: 100%;
         border-radius: 8px;
-        display: block;
-        margin: 0 auto;
       }
-
-      /* Heading styling */
-      h1 {
-        color: #183b4e; /* fixed missing # */
-        font-weight: bold;
-        border-radius: 15px;
-        display: inline-block;
-      }
-
-      /* Decorative horizontal rule */
       hr {
-        border: none;
+        border-width: 20px;
         height: 2px;
-        background-color: #ec8305;
+        color: #ec8305;
         width: 30%;
         border-radius: 10px;
         margin: 30px auto 0 auto;
         opacity: 1;
       }
-
-      /* Accordion styling */
       .accordion-button.custom-bg {
         background-color: #183b4e;
         color: #fff;
         font-weight: bold;
         border-radius: 30px;
       }
-
       .accordion-button.custom-bg:not(.collapsed) {
         background-color: #183b4e;
         color: #fff;
         border-radius: 30px;
       }
-
-      /* Accordion arrow */
-      .accordion-button::after,
-      .accordion-button.custom-bg::after {
-        filter: brightness(0) invert(1); /* makes arrow white */
-      }
-
-      /* Accordion body */
       .accordion-body {
         border-width: 5px;
       }
-
-      /* Custom bullet styling */
+      .accordion-button::after {
+        filter: brightness(0) invert(1); /* turns black arrow to white */
+      }
+      .accordion-button.custom-bg::after {
+        filter: brightness(0) invert(1);
+      }
       li::marker {
         color: #ec8305;
         font-size: 20px;
