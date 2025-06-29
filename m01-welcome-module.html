@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to Your AI Chatbot Journey</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      .center-wrapper {
+        display: flex;
+        justify-content: center; /* center horizontally */
+        align-items: center; /* center vertically */
+        height: 100vh; /* full viewport height */
+        text-align: center;
+      }
+
+      .content {
+        max-width: 600px;
+        padding: 20px;
+      }
+
+      body {
+        font-family: sans-serif;
+      }
+      h1 {
+        color: 183B4E;
+        font-weight: bold;
+        border-radius: 15px;
+        display: inline-block;
+        font-family: "Quicksand";
+      }
+      .welcome-container {
+        text-align: left;
+        padding: 40px 20px;
+      }
+      .welcome-image {
+        max-width: 600px;
+        width: 100%;
+        border-radius: 8px;
+      }
+      hr {
+        border-width: 20px;
+        height: 2px;
+        color: #ec8305;
+        width: 30%;
+        border-radius: 10px;
+        margin: 30px auto 0 auto;
+        opacity: 1;
+      }
+      .accordion-button.custom-bg {
+        background-color: #183b4e;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 30px;
+      }
+      .accordion-button.custom-bg:not(.collapsed) {
+        background-color: #183b4e;
+        color: #fff;
+        border-radius: 30px;
+      }
+      .accordion-body {
+        border-width: 5px;
+      }
+      .accordion-button::after {
+        filter: brightness(0) invert(1); /* turns black arrow to white */
+      }
+      .accordion-button.custom-bg::after {
+        filter: brightness(0) invert(1);
+      }
+      li::marker {
+        color: #ec8305;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center-wrapper">
+      <div class="welcome-container content">
+        <!-- Image -->
+        <img src="img/welcome.jpg" alt="Welcome Banner" class="welcome-image" />
+
+        <h1 class="mt-4">Welcome to Your Course!</h1>
+
+        <p class="mt-2">
+          Get ready to explore the power of AI and build your own customer
+          support chatbot—no technical experience needed!
+        </p>
+        <p>
+          This chatbot will help your retail customers instantly get answers to
+          common questions like:
+        </p>
+        <ul>
+          <li>What sizes do you carry?</li>
+          <li>Is the fabric 100% cotton?</li>
+          <li>How do I return or exchange a t-shirt?</li>
+        </ul>
+
+        <div class="container">
+          <div class="accordion" id="learningAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="learning-outcomes">
+                <button
+                  class="accordion-button custom-bg collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  Learning Outcomes
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="learning-outcomes"
+                data-bs-parent="#learningAccordion"
+              >
+                <div class="accordion-body text-dark">
+                  <ul>
+                    <li>Explain the value of chatbots in customer service</li>
+                    <li>Build and test an FAQ chatbot using ChatGPT</li>
+                    <li>Deploy or share a prototype chatbot</li>
+                    <li>
+                      Reflect on how this tool can support your retail goals
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Break Line -->
+        <hr />
+      </div>
+    </div>
+  </body>
+</html>
