@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>What Is a Chatbot & Why It Matters</title>
+    <title>Module 2 – About this Module</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -15,6 +15,22 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <style>
+      .center-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        padding: 20px;
+        margin-top: 10px;
+      }
+
+      .content {
+        max-width: 1000px;
+        width: 100%;
+        padding: 20px;
+      }
+
       html,
       body {
         margin: 0;
@@ -23,14 +39,14 @@
         height: 100%;
         width: 100%;
         font-family: sans-serif;
-        background-color: #ffffff;
       }
 
-      .center-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 40px 20px;
+      h1 {
+        color: #183b4e;
+        font-weight: bold;
+        border-radius: 15px;
+        display: inline-block;
+        font-family: "Quicksand";
       }
 
       .welcome-container {
@@ -39,30 +55,12 @@
         width: 100vw;
       }
 
-      .content {
-        max-width: 1000px;
-        width: 100%;
-      }
-
-      h2, h3 {
-        color: #183b4e;
-        font-weight: bold;
-        margin-top: 30px;
-        font-family: "Quicksand";
-      }
-
-      ul li::marker {
-        color: #ec8305;
-        font-size: 18px;
-      }
-
       .welcome-image {
         max-width: 800px;
         width: 100%;
         height: auto;
         border-radius: 8px;
         display: block;
-        margin: 0 auto 30px auto;
       }
 
       hr {
@@ -71,170 +69,105 @@
         color: #ec8305;
         width: 30%;
         border-radius: 10px;
-        margin: 40px auto 0 auto;
+        margin: 30px auto 0 auto;
         opacity: 1;
       }
-      .chatbot-text {
-        padding-right: 30px;
-      }
 
-      .chatbot-image {
-        width: 100%;
-        height: 250px;
-        border-radius: 8px;
-      }
-      #chatbotCarousel {
-        background-color: #efeff0;
-        border-radius: 10px;
-        padding: 30px 20px;
-      }
-
-      .carousel-item p {
-        font-size: 1.1rem;
-        margin-top: 10px;
-        color: #183b4e;
-      }
-
-      .carousel-item h4 {
-        color: #ec8305;
-        font-weight: bold;
-      }
-
-      .carousel-control-prev,
-      .carousel-control-next {
-        width: 5%;
-      }
-
-      @media (max-width: 576px) {
-        .carousel-control-prev,
-        .carousel-control-next {
-          width: 12%;
-        }
-
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-          transform: scale(0.8);
-        }
-
-        #chatbotCarousel {
-          padding: 20px 10px;
-        }
-      }
-
-      .carousel-control-prev-icon,
-      .carousel-control-next-icon {
+      .accordion-button.custom-bg {
         background-color: #183b4e;
-        border-radius: 50%;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 10px;
+        box-shadow: none;
+      }
+
+      .accordion-button.custom-bg:not(.collapsed) {
+        background-color: #183b4e;
+        color: #fff;
+        border-radius: 10px;
+      }
+
+      .accordion-body {
+        border: none;
+      }
+
+      .accordion-button::after {
+        filter: brightness(0) invert(1);
+      }
+
+      .accordion-button.custom-bg::after {
+        filter: brightness(0) invert(1);
+      }
+
+      li::marker {
+        color: #ec8305;
+        font-size: 20px;
+      }
+
+      .accordion-collapse {
+        border: none;
       }
     </style>
   </head>
   <body>
     <div class="center-wrapper">
       <div class="welcome-container content">
-        <h2 class="mb-4">What is a Chatbot?</h2>
-        <!-- 7/5 content -->
-        <div class="row align-items-center">
-          <div class="col-md-7 chatbot-text">
-            <p>
-              A chatbot is a software tool designed to simulate conversation with users—typically via a website or messaging app. It uses programmed logic or AI to answer questions automatically, 24/7.
-            </p>
-          </div>
-          <div class="col-md-5 text-center">
-            <img
-              src="img/chatbot.jpg"
-              alt=""
-              class="chatbot-image"
-            />
-          </div>
+        <!-- Image -->
+        <img src="img/banner.jpg" alt="Welcome Banner" class="welcome-image" />
 
-          <!-- carousel examples -->
-           <h3>Examples</h3>
-          <p></strong> Click the arrows to explore real examples of how ChatGPT can respond to common retail customer questions.</strong></p>
-          <div
-            id="chatbotCarousel"
-            class="carousel slide my-5"
-            data-bs-ride="false"
-          >
-          
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="d-flex flex-column align-items-center">
-                  <h4 class="text-center">Example 1</h4>
-                  <p class="text-center">
-                    <strong>Customer:</strong> What sizes do you carry? <br />
-                    <strong>Bot:</strong> We offer S, M, L, XL, and XXL in most styles!
-                  </p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="d-flex flex-column align-items-center">
-                  <h4 class="text-center">Example 2</h4>
-                  <p class="text-center">
-                    <strong>Customer:</strong> How do I return a product?<br />
-                    <strong>Bot:</strong> You can return any item within 30 days by clicking
-                    “Return” on your order page.
-                  </p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="d-flex flex-column align-items-center">
-                  <h4 class="text-center">Example 3</h4>
-                  <p class="text-center">
-                    <strong>Customer:</strong> Is this shirt 100% cotton?<br />
-                    <strong>Bot:</strong> Yes! It’s made with 100% organic cotton.
-                  </p>
+        <h1 class="mt-4">About this Module</h1>
+
+        <p class="mt-2">
+          In this module, you’ll roll up your sleeves and begin creating your
+          own chatbot using the <strong>Jotform Chatbot Builder</strong>. This
+          hands-on experience will show you how to structure real FAQ
+          conversations that reflect your store’s customer needs, all without
+          writing a single line of code.
+        </p>
+
+        <p>
+          Whether you choose a blank template or start from scratch, you’ll
+          learn how to add questions, customize responses, and preview your
+          chatbot in real time.
+        </p>
+
+        <div class="container">
+          <div class="accordion" id="learningAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="learning-outcomes">
+                <button
+                  class="accordion-button custom-bg collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  Learning Outcome
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="learning-outcomes"
+                data-bs-parent="#learningAccordion"
+              >
+                <div class="accordion-body text-dark">
+                  <p>By the end of this module, you will be able to:</p>
+                  <ul>
+                    <li>
+                      Navigate the Jotform chatbot interface with confidence.
+                    </li>
+                    <li>Customize a chatbot with your own retail FAQs.</li>
+                    <li>
+                      Preview, test, and refine a working chatbot prototype.
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
-
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#chatbotCarousel"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon bg-dark rounded-circle"
-                aria-hidden="true"
-              ></span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#chatbotCarousel"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon bg-dark rounded-circle"
-                aria-hidden="true"
-              ></span>
-            </button>
           </div>
-        </div>\
-
-        <h2>Why Chatbots Matter in Retail?</h2>
-        <p>Retail businesses face tons of repeat questions&mdash;returns, sizing, shipping, availability. Chatbots:</p>
-        <ul>
-          <li>Instantly answer FAQs&mdash;improving response speed</li>
-          <li>Reduce pressure on your staff</li>
-          <li>Boost customer satisfaction by being available anytime</li>
-          <li>Help capture leads or guide buyers toward a purchase</li>
-        </ul>
-
-        <h2>Why Use ChatGPT for Retail?</h2>
-        <ul>
-          <li>Reducing wait times</li>
-          <li>Giving consistent answers</li>
-          <li>Freeing up staff to handle complex or emotional concerns</li>
-          <li>Working around the clock (24/7 support!)</li>
-          <li>Adapting to changes quickly (update FAQs, no code needed)</li>
-        </ul>
-        <p>
-          <strong>You don’t need to know how to code</strong>—just upload your
-          questions and answers, and ChatGPT will handle the rest!
-        </p>
-
-       
+        </div>
 
         <hr />
       </div>
