@@ -65,27 +65,11 @@
         height: 100%;
       }
 
-      .accordion-button.custom-bg {
-        background-color: #183b4e;
-        color: #fff;
+      a {
+        color: #ec8305;
         font-weight: bold;
-        border-radius: 10px;
-        box-shadow: none;
+        text-decoration: underline;
       }
-
-      .accordion-button.custom-bg:not(.collapsed) {
-        background-color: #183b4e;
-        color: #fff;
-      }
-
-      .accordion-button::after {
-        filter: brightness(0) invert(1);
-      }
-
-      .accordion-collapse {
-        border: none;
-      }
-
       .flowchart-container img {
         border-radius: 10px;
         max-width: 100%;
@@ -109,10 +93,23 @@
         that supports your customers and reflects your store's voice.
       </p>
 
+      <!-- Flowchart Image -->
+      <div class="flowchart-container mt-3">
+        <h3>Chatbot Refinement Flowchart</h3>
+        <p>
+          This flowchart shows how refinement decisions are made, from editing
+          content to testing and finalizing your bot.
+        </p>
+        <div class="text-center">
+          <img
+            src="img/flowchart.png"
+            alt="Flowchart illustrating the chatbot refinement process. It begins with 'Open Chatbot Builder,'' followed by reviewing existing questions and answers. If the answers are unclear, it branches to 'Edit Wording/Tone' before continuing. If clear, it proceeds to 'Add Welcome & Goodbye Messages','Add or Adjust Conditional Logic,' and 'Apply Branding (colors, names, icon).'' The flow ends with testing the chatbot on desktop and mobile, gathering feedback, making final tweaks, and reaching 'Ready to launch!'"
+          />
+        </div>
+      </div>
+
       <!-- Step-by-step refinement process -->
       <h3 class="mt-5">Steps to Refine & Personalize</h3>
-      Refer to Module 2 - Build Your Bot video walkthrough to perform these
-      steps.
       <div class="row row-cols-1 row-cols-md-3 g-4 mt-3 step-cards">
         <div class="col">
           <div class="card h-100">
@@ -128,10 +125,12 @@
         <div class="col">
           <div class="card h-100">
             <div class="card-body">
-              <h5 class="card-title">Step 2: Personalize Greetings</h5>
+              <h5 class="card-title">
+                Step 2: Personalize Greetings and Colors
+              </h5>
               <p class="card-text">
                 Add or customize the welcome and goodbye messages to reflect
-                your brand’s voice.
+                your brand’s voice. Customize the colors to match your brand.
               </p>
             </div>
           </div>
@@ -181,20 +180,25 @@
           </div>
         </div>
       </div>
-
-      <!-- Flowchart Image -->
-      <div class="flowchart-container mt-5">
-        <h3>Chatbot Refinement Flowchart</h3>
+      <div class="assignment-box mt-4">
+        <h3>Explore More: Chatbot Personalization Tips</h3>
         <p>
-          This flowchart shows how refinement decisions are made, from editing
-          content to testing and finalizing your bot.
+          Want to make your chatbot feel more customized, branded, or engaging?
+          Browse official tutorials, FAQs, and how-to guides from Jotform.
         </p>
-        <div class="text-center">
-          <img
-            src="img/flowchart.png"
-            alt="Flowchart illustrating the chatbot refinement process. It begins with 'Open Chatbot Builder,'' followed by reviewing existing questions and answers. If the answers are unclear, it branches to 'Edit Wording/Tone' before continuing. If clear, it proceeds to 'Add Welcome & Goodbye Messages','Add or Adjust Conditional Logic,' and 'Apply Branding (colors, names, icon).'' The flow ends with testing the chatbot on desktop and mobile, gathering feedback, making final tweaks, and reaching 'Ready to launch!'"
-          />
-        </div>
+        <p>
+          <a
+            href="https://www.jotform.com/help/?s=chatbot"
+            target="_blank"
+            style="
+              color: #ec8305;
+              font-weight: bold;
+              text-decoration: underline;
+            "
+          >
+            Visit Jotform's Chatbot How-to guides
+          </a>
+        </p>
       </div>
 
       <!-- Task Section -->
@@ -203,12 +207,10 @@
         <ul>
           <li>Edit the language, tone, and sequence of chatbot messages.</li>
           <li>Customize visuals and greeting messages.</li>
-          <li>Test and validate conversation flow on different devices.</li>
+          <li>
+            Test, embed and validate conversation flow on different devices.
+          </li>
         </ul>
-        <p>
-          Capture a screenshot of your updated chatbot. You’ll be asked to
-          submit it before completing the course.
-        </p>
       </div>
     </div>
   </body>
